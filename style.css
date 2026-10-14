@@ -1,0 +1,296 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(
+        135deg,
+        #fff0f5,
+        #f9e4f5,
+        #f1e8ff
+    );
+    color: #673b58;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 850px;
+    margin: auto;
+    padding: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.abertura {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 10px;
+}
+
+.estrela {
+    color: #b35c91;
+    font-size: 14px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.pequeno,
+.etiqueta {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #b35c91;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(45px, 9vw, 76px);
+    line-height: 1.2;
+    color: #9e477b;
+    margin-bottom: 25px;
+}
+
+h1 span {
+    display: block;
+    color: #d45c98;
+}
+
+.introducao {
+    max-width: 480px;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 40px;
+    background: linear-gradient(135deg, #d95c9a, #a85bbd);
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(183, 79, 143, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.botao:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(183, 79, 143, 0.3);
+}
+
+.coracoes-decorativos {
+    margin-top: 35px;
+    font-size: 27px;
+    color: #dc78a9;
+    letter-spacing: 8px;
+}
+
+.historia {
+    background: rgba(255, 255, 255, 0.75);
+    padding: 45px 35px;
+    border-radius: 28px;
+    text-align: center;
+    box-shadow: 0 12px 40px rgba(153, 74, 125, 0.08);
+}
+
+h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #a3497c;
+    font-size: clamp(30px, 6vw, 42px);
+    margin-bottom: 25px;
+}
+
+.foto-moldura {
+    max-width: 410px;
+    margin: 0 auto 30px;
+    padding: 10px;
+    background: white;
+    border: 1px solid #f0c9df;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(153, 74, 125, 0.12);
+    transform: rotate(-1deg);
+}
+
+.foto-moldura img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 650px;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.texto-historia {
+    max-width: 590px;
+    margin: 0 auto 18px;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.separador {
+    font-size: 35px;
+    color: #d45c98;
+    margin: 35px 0;
+}
+
+.convite {
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+.surpresa {
+    margin-top: 30px;
+    padding: 30px 25px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #fff0f7, #f8edff);
+    animation: aparecer 0.8s ease;
+}
+
+.surpresa h2 {
+    margin-bottom: 20px;
+}
+
+.surpresa p {
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 18px;
+}
+
+.coracao-grande {
+    font-size: 42px;
+    margin-bottom: 15px;
+    animation: pulsar 1.2s infinite;
+}
+
+.declaracao-final {
+    color: #a13d78;
+    font-weight: 600;
+    margin-top: 25px;
+}
+
+.assinatura {
+    font-family: 'Dancing Script', cursive;
+    font-size: 26px;
+    line-height: 1.6;
+    color: #ad4d85;
+    margin-top: 25px;
+}
+
+.escondido {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 10px;
+    font-size: 12px;
+    color: #a45b83;
+}
+
+.rodape-coracoes {
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.coracao-flutuante {
+    position: fixed;
+    bottom: -40px;
+    pointer-events: none;
+    z-index: 0;
+    color: #d95c9a;
+    animation: flutuar linear forwards;
+}
+
+@keyframes flutuar {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulsar {
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 12px;
+    }
+
+    .abertura {
+        min-height: 85vh;
+        padding: 35px 12px;
+    }
+
+    .introducao {
+        font-size: 14px;
+    }
+
+    .historia {
+        padding: 30px 18px;
+        border-radius: 22px;
+    }
+
+    .foto-moldura {
+        padding: 7px;
+    }
+
+    .texto-historia {
+        font-size: 13px;
+    }
+
+    .surpresa {
+        padding: 25px 17px;
+    }
+
+    .surpresa p {
+        font-size: 13px;
+    }
+
+    .botao {
+        max-width: 100%;
+        padding: 14px 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}
